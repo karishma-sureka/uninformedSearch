@@ -1,5 +1,37 @@
+'''
+Author - Karishma Sureka
+Artificial Intelligence
+Uninformed Search - BFS, DFS, UCS
+
+Input format -
+<# of test cases>
+<task - BFS/DFS/UCS>
+<source>
+<destinations>
+<middle nodes>
+<#pipes>
+<graph with #pipes lines of the format - <start> <end> <length> <#off-periods> <period1> ... <periodN>
+.
+.
+.
+<start-time>
+
+Time loops in a 24 hour format and the pipes are unreachable if the time 
+of entry is in the off period of the pipe. 
+The time gain during traversal is equivalent to the length of each pipe. 
+
+Running this file - specify an input file in the cmd lines
+waterFlow.py -i input.txt
+
+The result of each search is written into a file output.txt and contains the time and the destination reached. 
+The output is None if the search is unsuccessful. 
+'''
+
 import sys
 import Queue
+
+
+
 
 def read_input_data(textFile):
 	cityPipesMap = dict()
